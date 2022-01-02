@@ -2,13 +2,9 @@ import React from "react";
 
 const Cart = props => {
   return (
-    
-<<<<<<< Updated upstream
+     <React.Fragment>
          
-=======
-          
->>>>>>> Stashed changes
-      
+     </React.Fragment>
   );
 };
 
