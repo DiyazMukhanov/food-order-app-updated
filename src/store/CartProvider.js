@@ -27,15 +27,33 @@ const cartReducer = (state, action) => {
         }
     };
 
-    // if(action.type === 'REMOVE'){
-    //     const updatedItems = state.items.filter(item => item.id !== action.id);
-    //     const 
-    //     return {
-    //         items: updatedItems,
-    //         totalAmount: updatedTotalAmount
-    //     }
-    // }
-};
+    if(action.type === 'REMOVE'){
+        const reducedItem = state.items.filter(item => item.id === action.id);
+        
+        if(reducedItem[0].quantityPurchased === 1){
+            const updatedItems = state.items.filter(item => item.id !== action.id);
+            const updatedTotalAmount = updatedItems.reduce((accum, item) => {
+                return accum + item.quantityPurchased * item.price;
+                }, 0);
+            return {
+                items: updatedItems,
+                totalAmount: updatedTotalAmount
+            };
+        }; 
+
+
+        // if(reducedItem.quantityPurchased === 1){
+        // const updatedItems = state.items.filter(item => item.id !== action.id);
+        // const updatedTotalAmount = updatedItems.reduce((accum, item) => {
+        // return accum + item.quantityPurchased * item.price;
+        // }, 0);
+        
+        };
+       
+
+        
+    }
+
 
 
 const CartProvider = props => {

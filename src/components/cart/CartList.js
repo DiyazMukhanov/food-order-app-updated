@@ -8,10 +8,14 @@ const CartList = props => {
        cartCtx.addItem({...item, quantityPurchased: 1});
  }   
 
+ const cartItemRemoveHandler = (id) => {
+    cartCtx.removeItem(id);
+ }
+
   return (
      <ul>
          {cartCtx.items.map(item => <li key={item.id}><div><span>{item.name}</span> <span>{item.price}</span> <span>Requested: {item.quantityPurchased}</span></div> 
-            <div><button>-</button><button onClick={cartItemAddHandler.bind(null, item)}>+</button></div>
+            <div><button onClick={cartItemRemoveHandler.bind(null, item.id)}>-</button><button onClick={cartItemAddHandler.bind(null, item)}>+</button></div>
          </li>)}
      </ul>
   );
