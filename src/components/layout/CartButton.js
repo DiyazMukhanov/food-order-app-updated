@@ -1,13 +1,13 @@
 import React, {useContext} from "react";
 import CartContext from "../../store/cart-context";
 
-const CartButton = () => {
+const CartButton = (props) => {
  const cartCtx = useContext(CartContext);
   const numberOfAddedMeals = cartCtx.items.reduce((accum, item) => {
       return accum + item.quantityPurchased;
   }, 0)
   return (
-      <div>
+      <div onClick={props.onClick}>
           <h2>Your Cart</h2>
           <span>{numberOfAddedMeals}</span>
       </div>

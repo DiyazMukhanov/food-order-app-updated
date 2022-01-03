@@ -5,6 +5,11 @@ import CartList from "./CartList";
 
 const Cart = props => {
   const cartCtx = useContext(CartContext);
+
+  const cartCloseHandler = () => {
+    props.onClose();
+  };
+
   return (
      <React.Fragment>
          <div>
@@ -13,6 +18,7 @@ const Cart = props => {
          <div>
              <h1>Total Amount</h1>
              <span>{cartCtx.totalAmount}</span>
+             <button onClick={cartCloseHandler}>Close</button> <button>Order</button>
          </div>
      </React.Fragment>
   );

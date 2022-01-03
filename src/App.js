@@ -8,11 +8,21 @@ import Cart from './components/cart/Cart';
 
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
+  
+  const cartCloseHandler = () => {
+    setCartIsShown(false);
+  }
+
+  const cartOpenHandler = () => {
+    setCartIsShown(true);
+  }
+  
   return (
     
       <CartProvider>
-        <Cart />
-        <Header />
+
+        {cartIsShown && <Cart onClose = {cartCloseHandler}/>}
+        <Header onCartOpen = {cartOpenHandler}/>
         <Meals />
       </CartProvider>
      
