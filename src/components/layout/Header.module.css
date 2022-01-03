@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    justify-content: space-between; 
+    height: 6rem;  
+    background-color: #8a2b06;
+    position: fixed;
+    width: 100%;
+}
+
+h1 {
+    color: white;
+    margin-left: 9rem;
+    margin-top: 2rem;
+}
+
+/* .cartButton {
+    margin-right: 1rem;
+} */
+
+
+
+

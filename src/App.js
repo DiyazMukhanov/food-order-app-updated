@@ -18,14 +18,14 @@ function App() {
   }
   
   return (
-    
+       <div className='App'>
       <CartProvider>
 
         {cartIsShown && <Cart onClose = {cartCloseHandler}/>}
         <Header onCartOpen = {cartOpenHandler}/>
         <Meals />
       </CartProvider>
-     
+      </div>
     
   );
 }

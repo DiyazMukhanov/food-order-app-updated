@@ -1,5 +1,6 @@
 import React, {useContext} from "react";
 import CartContext from "../../store/cart-context";
+import classes from './CartButton.module.css';
 
 const CartButton = (props) => {
  const cartCtx = useContext(CartContext);
@@ -7,9 +8,9 @@ const CartButton = (props) => {
       return accum + item.quantityPurchased;
   }, 0)
   return (
-      <div onClick={props.onClick}>
+      <div onClick={props.onClick} className={classes.cartButton}>
           <h2>Your Cart</h2>
-          <span>{numberOfAddedMeals}</span>
+         <span>{numberOfAddedMeals}</span>
       </div>
   );
 };
