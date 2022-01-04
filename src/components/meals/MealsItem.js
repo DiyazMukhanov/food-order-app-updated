@@ -7,6 +7,8 @@ import classes from './MealsItem.module.css';
 
 const MealsItem = (props) => {
     const cartCtx = useContext(CartContext);
+
+    const price = `KZT ${props.price.toFixed(2)}`;
     const AddItemHandler = (quantityPurchased) => {
        cartCtx.addItem({
           name: props.name,
@@ -24,7 +26,7 @@ const MealsItem = (props) => {
                {props.description}
            </div>
            <div className={classes.price}>
-               {props.price}
+               {price}
            </div>
            </div>
            <div className={classes.rightPart}>

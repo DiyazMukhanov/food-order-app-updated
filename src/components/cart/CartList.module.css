@@ -1,0 +1,42 @@
+.ul {
+    list-style-type: none;
+    overflow: scroll;
+    max-height: 18rem;
+}
+
+.li {
+    display: flex;
+    justify-content: space-between;
+    border: solid red 1px;
+    height: 10rem;
+}
+
+.name {
+  font-size: 1.5rem; 
+  font-weight: bold; 
+  color: #404040;
+}
+
+.leftBlock {
+    margin-top: 3rem;
+    margin-left: 1rem;
+}
+
+.price {
+    margin-top: 1rem;
+    
+}
+
+.price1 {
+    color: #A0522D;
+    font-weight: bold;
+}
+
+.quantity {
+    border: solid grey 1px;
+    padding: .5rem;
+    border-radius: .5rem;
+    font-weight: bold;
+    color: #404040;
+    margin-left: 2rem;
+}

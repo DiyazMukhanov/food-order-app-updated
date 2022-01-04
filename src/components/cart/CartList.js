@@ -1,5 +1,6 @@
 import React, {useContext} from "react";
 import CartContext from "../../store/cart-context";
+import classes from './CartList.module.css';
 
 const CartList = props => {
  const cartCtx = useContext(CartContext);
@@ -13,8 +14,8 @@ const CartList = props => {
  }
 
   return (
-     <ul>
-         {cartCtx.items.map(item => <li key={item.id}><div><span>{item.name}</span> <span>{item.price}</span> <span>Requested: {item.quantityPurchased}</span></div> 
+     <ul className={classes.ul}>
+         {cartCtx.items.map(item => <li key={item.id} className={classes.li}><div className={classes.leftBlock}><span className={classes.name}>{item.name}</span> <div className={classes.price}><span className={classes.price1}>KZT {item.price}</span> <span className={classes.quantity}>x {item.quantityPurchased}</span></div></div> 
             <div><button onClick={cartItemRemoveHandler.bind(null, item.id)}>-</button><button onClick={cartItemAddHandler.bind(null, item)}>+</button></div>
          </li>)}
      </ul>

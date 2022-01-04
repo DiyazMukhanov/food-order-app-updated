@@ -23,17 +23,22 @@ margin-right: 5%;
 
 .list h3 {
   /* border: solid blue 1px; */
-  width: 10%;
+  color: #1a1a1a;
+  width: 40%;
 }
 
 .description {
     /* border: solid blue 1px; */
     width: 40%;
+    font-style: italic;
 }
 
 .price {
     /* border: solid blue 1px; */
-    width: 10%;
+    width: 30%;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #A0522D;
 }
