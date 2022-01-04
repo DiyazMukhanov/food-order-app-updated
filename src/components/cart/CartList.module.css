@@ -7,8 +7,9 @@
 .li {
     display: flex;
     justify-content: space-between;
-    border: solid red 1px;
+    border-bottom: solid #661a00 2px;
     height: 10rem;
+    margin-left: -2.5rem;
 }
 
 .name {
@@ -40,3 +41,38 @@
     color: #404040;
     margin-left: 2rem;
 }
+
+.buttons {
+    /* border: solid green 1px; */
+    width: 30%;
+    margin-top: 13%;
+    margin-bottom: 10%;
+}
+
+.minus {
+ cursor: pointer;
+  width: 3rem;
+  height: 2rem;
+  border-radius: 1px;
+  border:solid #661a00 2px; 
+  background-color: white;
+  font-weight: bold;
+}
+
+.plus {
+    cursor: pointer;
+    width: 3rem;
+    height: 2rem;
+    border-radius: 1px;
+    border:solid #661a00 2px;  
+    background-color: white;
+    margin-left: 1rem;
+    font-weight: bold;
+  }
+
+  .minus:hover,
+  .plus:hover {
+     background-color: #661a00;
+     color: white;
+  }
+
