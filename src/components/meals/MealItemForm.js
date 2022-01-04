@@ -1,4 +1,5 @@
 import React, {useRef} from "react";
+import classes from './MealItemForm.module.css';
 
 const MealItemForm = (props) => {
 
@@ -11,10 +12,12 @@ const MealItemForm = (props) => {
   }
 
   return (
-      <form onSubmit={onSubmitHandler}>
-          <label>Amount</label>
-          <input ref={quantityInputRef}></input>
-          <button type="submit">+ Add</button>
+      <form onSubmit={onSubmitHandler} className={classes.form}>
+          <div>
+          <label className={classes.label}>Amount</label>
+          <input ref={quantityInputRef} className={classes.input}></input>
+          </div>
+          <button type="submit" className={classes.button}>+ Add</button>
       </form>
   );
 

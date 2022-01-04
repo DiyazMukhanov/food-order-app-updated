@@ -1,3 +1,35 @@
-img {
-    width: 100%;
+.mealsSummary {
+    border: solid red;
+    background-color: #383838;
 }
+
+.mealsSummary img {
+    width: 100%;
+    
+}
+
+
+
+.summary {
+    position: relative;
+    padding-top: .2rem;
+    padding-bottom: 2rem;
+     width: 55vw;
+     text-align: center;
+     margin-left: 20%;
+     background-color: #383838;
+     color: white;
+     border-radius: 1rem;
+     margin-top: -5rem;
+     z-index:30;
+     box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25);
+}
+
+.header {
+    
+    
+    width: 70%;
+    margin-left: 12.5%;
+    
+}
+

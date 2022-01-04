@@ -9,8 +9,8 @@ const CartButton = (props) => {
   }, 0)
   return (
       <div onClick={props.onClick} className={classes.cartButton}>
-          <h2>Your Cart</h2>
-         <span>{numberOfAddedMeals}</span>
+          <h2 className={classes.header}>Your Cart</h2>
+         <span className={classes.span}>{numberOfAddedMeals}</span>
       </div>
   );
 };

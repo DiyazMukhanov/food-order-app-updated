@@ -1,0 +1,34 @@
+.list {
+display: flex;
+justify-content: space-between;
+}
+
+.leftPart {
+    border: solid red 1px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 1rem;
+}
+
+.rightPart {
+    border: solid green 1px;
+}
+
+.list h3 {
+  border: solid blue 1px;
+  width: 10%;
+}
+
+.description {
+    border: solid blue 1px;
+    width: 40%;
+}
+
+.price {
+    border: solid blue 1px;
+    width: 10%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

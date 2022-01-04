@@ -5,6 +5,7 @@
     background-color: #8a2b06;
     position: fixed;
     width: 100%;
+    z-index: 100;
 }
 
 h1 {

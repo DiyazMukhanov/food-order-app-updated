@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "../UI/Card";
 import MealsItem from "./MealsItem";
+import classes from './AvailableMeals.module.css';
 
 const availableMealsData = [
     {
@@ -35,7 +36,7 @@ const AvailableMeals = () => {
         );
   return (
       <Card>
-      <ul>
+      <ul className={classes.unorderedList}>
           {mealsList}
       </ul>
       </Card>
