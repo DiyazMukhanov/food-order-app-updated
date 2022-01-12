@@ -39,21 +39,24 @@ const Checkout = props => {
         
     };
 
-    const validNameMessage = <p>Введите валидное имя</p>
-    const validPhoneMessage = <p>Введите валидный номер</p>
-    const validAdressMessage = <p>Введите валидный адрес</p>
+    const validNameMessage = <p className={classes.messageInvalid}>Введите валидное имя</p>
+    const validPhoneMessage = <p className={classes.messageInvalid}>Введите валидный номер</p>
+    const validAdressMessage = <p className={classes.messageInvalid}>Введите валидный адрес</p>
 
    return <div>
        <form onSubmit={checkoutSubmitHandler}>
            <label htmlFor="name">Введите имя</label>
            <input id="name" ref={inputNameRef} className={!formInputsValidity.name && classes.invalid}></input>
+           {!formInputsValidity.name && validNameMessage}
            <label htmlFor="phone">Введите телефона</label>
            <input id="phone" ref={inputPhoneRef} className={!formInputsValidity.phone && classes.invalid}></input>
+           {!formInputsValidity.phone && validPhoneMessage}
            <label htmlFor="adress">Введите адрес</label>
            <input id="adress" ref={inputAddressRef} className={!formInputsValidity.adress && classes.invalid}></input>
+           {!formInputsValidity.adress && validAdressMessage}
            <button>Заказать</button>
        </form>
-       <button>Отмена</button>
+       <button onClick={props.onCancel}>Отмена</button>
    </div>
 };
 

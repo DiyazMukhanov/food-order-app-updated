@@ -1,3 +1,8 @@
 .invalid {
     border: solid red;
 }
+
+.messageInvalid {
+    color: red;
+    font-style: italic;
+}

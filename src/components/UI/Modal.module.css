@@ -10,10 +10,10 @@
 
 .overlay {
     position: fixed;
-    top: 20vh;
+    top: 10vh;
     left: 30%;
     width: 40%;
-    height: 60%;
+    height: 80%;
     background-color: white;
     padding: 1rem;
     border-radius: 14px;
