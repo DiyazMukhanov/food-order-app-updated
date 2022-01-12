@@ -6,3 +6,10 @@
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
     margin-top: 3rem;
 }
+
+@media only screen and (max-width: 715px) {
+    .card {
+        margin-top: 60%;
+        /* border: solid red 1px; */
+    } 
+}

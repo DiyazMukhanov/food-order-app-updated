@@ -6,7 +6,7 @@ import classes from './MealsItem.module.css';
 
 
 const MealsItem = (props) => {
-    const cartCtx = useContext(CartContext);
+    const cartCtx = React.useContext(CartContext);
 
     const price = `KZT ${props.price.toFixed(2)}`;
     const AddItemHandler = (quantityPurchased) => {

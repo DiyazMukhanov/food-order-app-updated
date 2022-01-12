@@ -9,11 +9,10 @@ const MealsSummary = () => {
         <img src={mealsImage}></img>
         
         <div className={classes.summary}>
-          <h1 className={classes.header}>Delicious Food, Delivered To You</h1>
-          <p>Choose your favorite meal from our broad selection of available meals and enjoy a delicious</p> 
-          <p>lunch or dinner at home.</p>
-          <p>All our meals are cooked with high-quality ingredients, just-in-time and of course by</p>
-          <p>experienced chefs!</p>
+          <h1 className={classes.header}>Вкусная еда для тебя</h1>
+          <p>Выбери своё любимое блюдо из нашего меню и наслаждайся прекарсным обедом или ужином</p>
+          <p>у себя дома. Настоящие профессионалы своего дела - наши повара, вкладывают смысл  </p>
+          <p>в кулинарные произведения искусства!</p>
           </div>
       </div>
   );

@@ -3,7 +3,7 @@ import CartContext from "../../store/cart-context";
 import classes from './CartList.module.css';
 
 const CartList = props => {
- const cartCtx = useContext(CartContext);
+ const cartCtx = React.useContext(CartContext);
 
  const cartItemAddHandler = (item) => {
        cartCtx.addItem({...item, quantityPurchased: 1});

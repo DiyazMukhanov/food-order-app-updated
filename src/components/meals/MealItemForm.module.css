@@ -34,3 +34,12 @@
 .button:hover {
     background-color: #4d1a00;
 }
+
+@media only screen and (max-width: 715px) {
+    .form {
+        /* border: solid red 1px; */
+        width: 100%;
+        margin: 0;
+        padding-bottom: 1rem;
+    }
+}

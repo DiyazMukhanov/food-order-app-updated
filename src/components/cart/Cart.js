@@ -6,24 +6,24 @@ import CartList from "./CartList";
 import classes from './Cart.module.css';
 
 const Cart = props => {
-  const cartCtx = useContext(CartContext);
+  const cartCtx = React.useContext(CartContext);
 
   const cartCloseHandler = () => {
     props.onClose();
   };
 
   return (
-     <Modal>
+     <Modal onClose = {props.onClose}>
          <div>
              <CartList />
          </div>
          <div className={classes.bottomCart}>
            <div className={classes.topPart}>
-             <h1 className={classes.h1}>Total Amount</h1>
-             <span className={classes.amount}>KZT {cartCtx.totalAmount}</span>
+             <h1 className={classes.h1}>К оплате</h1>
+             <span className={classes.amount}>KZT {cartCtx.totalAmount.toFixed(2)}</span>
              </div>
              <div className={classes.buttonsBottom}>
-             <button onClick={cartCloseHandler} className={classes.buttonClose} >Close</button> <button className={classes.buttonOrder}>Order</button>
+             <button onClick={cartCloseHandler} className={classes.buttonClose} >Выйти</button> <button className={classes.buttonOrder}>Заказать</button>
              </div>
          </div>
      </Modal>

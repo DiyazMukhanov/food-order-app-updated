@@ -3,13 +3,13 @@ import CartContext from "../../store/cart-context";
 import classes from './CartButton.module.css';
 
 const CartButton = (props) => {
- const cartCtx = useContext(CartContext);
+ const cartCtx = React.useContext(CartContext);
   const numberOfAddedMeals = cartCtx.items.reduce((accum, item) => {
       return accum + item.quantityPurchased;
   }, 0)
   return (
       <div onClick={props.onClick} className={classes.cartButton}>
-          <h2 className={classes.header}>Your Cart</h2>
+          <h2 className={classes.header}>Корзина</h2>
          <span className={classes.span}>{numberOfAddedMeals}</span>
       </div>
   );

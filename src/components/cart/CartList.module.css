@@ -76,3 +76,10 @@
      color: white;
   }
 
+  @media only screen and (max-width: 715px) {
+      .ul {
+          height: 50rem;
+          max-height: 25rem;
+      }
+  }
+
