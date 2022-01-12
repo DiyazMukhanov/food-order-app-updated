@@ -64,7 +64,7 @@ const AvailableMeals = () => {
         
     }, []);
     const mealsList = meals.map(meal => 
-        <MealsItem key = {meal.id} name = {meal.name} description = {meal.description} price = {meal.price} id = {meal.id}/>
+        <MealsItem key = {meal.id} name = {meal.name} description = {meal.description} price = {+meal.price} id = {meal.id}/>
         );
 
         if(isLoading) {return <p>Loading meals...</p>};

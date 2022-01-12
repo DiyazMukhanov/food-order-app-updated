@@ -30,16 +30,19 @@ const Cart = props => {
    });
    if(!response.ok){
      throw new Error('Ошибка отправки заказа');
-   }
+     return;
+   };
+   
    setIsSubmitted(true);
+   cartCtx.clearCart();
    
   } catch(error){
-    setError(error.message);
+      setError(error.message);
   }
   
   }
-
-  const successMessage = <h1>Success</h1>;
+  const finalContent = <h2>Ваш заказ успешно отправлен... Спасибо за то, что выбрали нас!</h2>;
+  
 
   return (
      <Modal onClose = {props.onClose}>
@@ -51,9 +54,10 @@ const Cart = props => {
          <div className={classes.bottomCart}>
          {!isSubmitted && <div className={classes.topPart}>
              <h1 className={classes.h1}>К оплате</h1>
-             <span className={classes.amount}>KZT {cartCtx.totalAmount.toFixed(2)}</span>
+             <span className={classes.amount}>KZT {cartCtx.totalAmount}</span>
              </div>}
-             {isSubmitted && <h2>Ваш заказ успешно отправлен... Спасибо за то, что выбрали нас!</h2>}
+             {isSubmitted && finalContent}
+             {error && <h2>Ошибка. Проверьте интернет соединение</h2>}
              {!isCheckingOut && 
              <div className={classes.buttonsBottom}>
              <button onClick={cartCloseHandler} className={classes.buttonClose} >Выйти</button> <button className={classes.buttonOrder} onClick = {checkOutHandler}>Заказать</button>
