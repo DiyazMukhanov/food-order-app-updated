@@ -35,13 +35,19 @@ const Checkout = props => {
         if(!nameIsValid || !phoneIsValid || !adressIsValid){
             return;
         }
+        
+        const userData = {name: enteredName, phone: enteredPhone, adress: enteredAdress};
 
+        props.onConfirm(userData);
         
     };
 
     const validNameMessage = <p className={classes.messageInvalid}>Введите валидное имя</p>
     const validPhoneMessage = <p className={classes.messageInvalid}>Введите валидный номер</p>
     const validAdressMessage = <p className={classes.messageInvalid}>Введите валидный адрес</p>
+
+    
+
 
    return <div>
        <form onSubmit={checkoutSubmitHandler}>
@@ -54,7 +60,7 @@ const Checkout = props => {
            <label htmlFor="adress">Введите адрес</label>
            <input id="adress" ref={inputAddressRef} className={!formInputsValidity.adress && classes.invalid}></input>
            {!formInputsValidity.adress && validAdressMessage}
-           <button>Заказать</button>
+           <button>Подтвердить</button>
        </form>
        <button onClick={props.onCancel}>Отмена</button>
    </div>
