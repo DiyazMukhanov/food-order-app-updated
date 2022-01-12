@@ -4,6 +4,7 @@ import CartContext from "../../store/cart-context";
 import Modal from "../UI/Modal";
 import CartList from "./CartList";
 import classes from './Cart.module.css';
+import Checkout from "./Checkout";
 
 const Cart = props => {
   const cartCtx = React.useContext(CartContext);
@@ -17,6 +18,7 @@ const Cart = props => {
          <div>
              <CartList />
          </div>
+         <Checkout />
          <div className={classes.bottomCart}>
            <div className={classes.topPart}>
              <h1 className={classes.h1}>К оплате</h1>
